@@ -17,4 +17,5 @@ public class AddNumbers2 {
         System.out.println("Sum of the integers = " + z);
     }
 
+    
 }
