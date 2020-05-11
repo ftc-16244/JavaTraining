@@ -1,0 +1,53 @@
+// getSphereData
+// This program promts for the radius of a sphere. 
+// input is echod back to the console. Then two methods are called to 
+// calculate the surface area and volume of the sphere.
+
+import java.util.*; // import utilites to get Scanner to work
+
+class Main {
+  public static void main(String[] args) {
+        System.out.println("This program computes the surface area and volume of a sphere");
+        // Specify edge before you use it. It is an integer
+        int radius;        
+        double SA;
+        double V;
+        
+        // Instantiate "in" as a new Scanner OBJECT  
+        // "in" is a copy of the Scanner object and can do anything Scanner can
+        Scanner in = new Scanner(System.in);
+      // Writes message to the console
+        System.out.println("Enter the radius your sphere (must be an integer)");
+      // Takes user input "in.nextInt and assigns to edge"
+       // "nextIn()t" is a method that belongs to Scanner and now in.
+       // setting "edge" equal to in.nextInt() assigns the method output to edge. 
+        radius = in.nextInt();
+        //close the Scanner to save rewources.
+        in.close();
+        // Repeat the user entry.....
+        System.out.println("You entered "+ radius);
+        // Call the surface area method
+        SA = getSurfArea(radius);
+        // After the method is complete. Exection return here. 
+        //Print this message
+        System.out.println("Surface Area is " + SA); 
+        // Repeat the porcees for Volume
+        V = getVolume(radius);
+        System.out.println("Volume is " + V);        
+  }
+// ==========================================================
+// ==========================================================
+//            Methods
+  private static double getSurfArea(int r){
+  double surfArea;
+  surfArea = (4.*Math.PI*(Math.pow(r,2)));
+   return surfArea; // sends surfArea back to the main code
+  }
+
+  private static double getVolume(int r){
+  double Vol;
+    Vol=(4./3.)*Math.PI*(Math.pow(r,3));
+    return Vol;  
+  }
+  
+}
